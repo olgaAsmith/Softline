@@ -1,0 +1,172 @@
+@import '../../vendor/styles/mixins.scss';
+
+.map {
+  padding-bottom: 100px;
+  @include desktop {
+    padding-bottom: 10px;
+  }
+  &__info {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.06);
+    padding: 28px 70px 0.5px;
+    margin-bottom: 90px;
+
+    @include desktop {
+      flex-direction: column;
+      padding: 20px 0 0 5px;
+      margin-bottom: 0;
+    }
+  }
+  &__office {
+    display: flex;
+    &:hover {
+      cursor: pointer;
+    }
+    &-title {
+      font-size: 24px;
+      line-height: 24px;
+      padding-right: 12px;
+
+      @include desktopXL {
+        font-size: 20px;
+        line-height: 20px;
+        padding-right: 5px;
+      }
+    }
+    &-arrow {
+      width: 24px;
+      height: 24px;
+      background-image: url(../../images/icons/arrow-down.svg);
+      @include desktopXL {
+        width: 20px;
+        background-size: contain;
+      }
+      &_active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__menu-list {
+    display: flex;
+    gap: 29px;
+
+    @include desktop {
+      margin-top: 16px;
+      width: 100%;
+      overflow: scroll;
+      gap: 16px;
+    }
+  }
+  &__menu-item {
+    line-height: 20px;
+    padding-bottom: 25px;
+    text-wrap: nowrap;
+
+    @include desktop {
+      font-size: 14px;
+      line-height: 16px;
+      padding-bottom: 20px;
+    }
+    &_active {
+      color: #a30c33;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &_underline {
+      border-bottom: 3px solid #a30c33;
+    }
+  }
+  &__card {
+    height: 603px;
+    margin: 0 30px;
+    @include desktop {
+      height: 412px;
+      margin: 0;
+    }
+    &-image {
+      width: 100%;
+      height: 100%;
+      @include desktop {
+        object-fit: cover;
+        object-position: left;
+      }
+    }
+  }
+  &__extra-menu {
+    display: block;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.06);
+    padding: 30px 68.5px;
+    background: #fff;
+    top: 100px;
+    left: -300%;
+    transition:
+      opacity 0.2s,
+      height 0.6s;
+    @include desktop {
+      padding: 15px 5px;
+      top: 40px;
+    }
+    &_active {
+      height: min-content;
+      opacity: 1;
+      left: 0;
+    }
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      @include desktop {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 15px;
+      }
+    }
+    &-submenu {
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      font-weight: 400;
+      margin-top: 10px;
+      @include desktop {
+        display: none;
+        font-size: 14px;
+        &_active {
+          display: flex;
+        }
+      }
+      &-arrow {
+        display: none;
+        @include desktop {
+          display: inline-block;
+          width: 8px;
+          height: 5px;
+          background-image: url(../../images/icons/extra-menu-down.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-left: 3px;
+          &_active {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      &-title {
+        line-height: 20px;
+        text-wrap: nowrap;
+        @include desktop {
+          font-size: 14px;
+          &_active {
+            color: #a30c33;
+          }
+        }
+      }
+    }
+  }
+}

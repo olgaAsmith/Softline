@@ -1,0 +1,33 @@
+@import url('./src/vendor/fonts/fonts.scss');
+@import url('./src/vendor/normalize.scss');
+@import url(./src/blocks/body/body.scss);
+@import url(./src/blocks/page/page.scss);
+@import url(./src/blocks/title/title.scss);
+@import url(./src/blocks/header/header.scss);
+@import url(./src/blocks/info/info.scss);
+@import url(./src/blocks/promo/promo.scss);
+@import url(./src/blocks/map/map.scss);
+@import url(./src/blocks/mission/mission.scss);
+@import url(./src/blocks/business/business.scss);
+@import url(./src/blocks/motivation/motivation.scss);
+@import url(./src/blocks/gallery/gallery.scss);
+
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

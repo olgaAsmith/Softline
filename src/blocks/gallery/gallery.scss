@@ -1,0 +1,88 @@
+@import '../../vendor/styles/mixins.scss';
+
+.gallery {
+  position: relative;
+  overflow: hidden;
+  margin: 0 70px;
+  padding: 103px 0 70px;
+  @include tablet {
+    margin: 0 5px;
+    padding: 50px 0;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+    @include tablet {
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  &__panel {
+    display: flex;
+    gap: 20px;
+    @include phone {
+      display: none;
+    }
+  }
+  &__button {
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-position: center;
+    background-size: contain;
+    @include tablet {
+      width: 28px;
+      height: 28px;
+    }
+    &_prev {
+      background-image: url(../../images/icons/prev.svg);
+    }
+    &_next {
+      background-image: url(../../images/icons/next.svg);
+    }
+  }
+  &__slider {
+    display: flex;
+    margin: auto;
+    transition: transform 0.5s ease-in-out;
+    &-image {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 100%;
+      height: 834px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      @include desktop {
+        background-size: cover;
+
+        height: 600px;
+      }
+      @include phone {
+        height: 210px;
+      }
+    }
+  }
+  &__indicators {
+    display: flex;
+    margin-top: 28px;
+    @include phone {
+      display: none;
+    }
+  }
+  &__indicator {
+    width: 214px;
+    height: 6px;
+    opacity: 0.1;
+    background-color: #000;
+    margin: 0 5px;
+    cursor: pointer;
+    &_active {
+      opacity: 1;
+      background-color: #a30c33;
+    }
+  }
+}

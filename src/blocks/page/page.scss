@@ -1,0 +1,11 @@
+@import '../../vendor/styles/mixins.scss';
+
+.page {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1250px;
+  @include phone {
+    width: calc(100% - 30px);
+  }
+}

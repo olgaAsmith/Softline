@@ -1,0 +1,82 @@
+@import '../../vendor/styles/mixins.scss';
+
+.promo {
+  padding: 100px 70px;
+
+  @include desktop {
+    padding: 57px 0 50px;
+  }
+  &__about {
+    box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.08);
+    padding: 100px 110px;
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 32px;
+    line-height: 38.4px;
+
+    @include desktop {
+      padding: 24px 5px;
+      font-size: 16px;
+      line-height: 19.2px;
+      margin-bottom: 50px;
+    }
+    &-span {
+      color: #b01736;
+    }
+  }
+  &__statistics-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+    gap: 85px 180px;
+    justify-content: center;
+    @include desktop {
+      gap: 24px 0;
+      align-items: start;
+      text-align: center;
+      padding: 0;
+    }
+  }
+  &__statistics-item {
+    width: min-content;
+    @include desktop {
+      width: 50%;
+    }
+    &_last {
+      width: 300px;
+    }
+  }
+  &__statistics-numbers {
+    color: #a30c33;
+    width: min-content;
+    text-wrap: nowrap;
+    opacity: 0.95;
+    font-size: 80px;
+    line-height: 64px;
+    @include desktop {
+      font-size: 40px;
+      line-height: 32px;
+    }
+    &_span {
+      margin-right: 10px;
+      @include desktop {
+        margin-right: 4px;
+      }
+    }
+  }
+  &__statistics-description {
+    margin-top: 4px;
+    font-weight: 400;
+    line-height: 21.6px;
+    &_wrap {
+      text-wrap: nowrap;
+    }
+    @include desktop {
+      margin-top: 0;
+      text-align: center;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

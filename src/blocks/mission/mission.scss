@@ -1,0 +1,35 @@
+@import '../../vendor/styles/mixins.scss';
+
+.mission {
+  background-image: url(../../images/bg-red.jpg);
+  padding: 140px 72px 140px 68px;
+  color: #fff;
+  text-align: center;
+  @include desktop {
+    background-image: url(../../images/bg-red-mini.jpg);
+    padding: 32px 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__title {
+    margin-bottom: 40px;
+    @include desktop {
+      margin-bottom: 10px;
+    }
+  }
+  &__description {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    @include desktop {
+      font-size: 16px;
+      line-height: 20.8px;
+    }
+  }
+}
+.mission br {
+  @include desktop {
+    display: none;
+  }
+}
