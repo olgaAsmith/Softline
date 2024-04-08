@@ -3,7 +3,6 @@ const mapMenuArrow = document.querySelector('.map__office-arrow');
 const mapExtraMenu = document.querySelector('.map__extra-menu');
 const menuList = document.querySelector('.map__menu-list');
 const menuItems = document.querySelectorAll('.map__menu-item');
-const imageMap = document.querySelector('.map__card-image');
 const extraMenuTitles = document.querySelectorAll(
   '.map__extra-menu-submenu-title',
 );
@@ -30,8 +29,6 @@ menuList.addEventListener('click', function (event) {
       'map__menu-item_active',
       'map__menu-item_underline',
     );
-    const imageSrc = event.target.getAttribute('data-image');
-    imageMap.src = imageSrc;
   }
 });
 
